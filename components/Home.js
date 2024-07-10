@@ -35,7 +35,7 @@ function Home() {
   );
 
   useEffect(() => {
-    fetch('http://localhost:3000/movies').then(reponse=>reponse.json()).then(data=> {
+    fetch('https://my-moviz-backend-pi.vercel.app/movies').then(reponse=>reponse.json()).then(data=> {
       const tabMovies = data.movies.map(element=> {
         var newOverview = element.overview
         if(element.overview.length > 250) {
